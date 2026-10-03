@@ -1,0 +1,67 @@
+{
+  "input_binary_sha256": "d66d15f3dff35292e42e0d301bf53a7fcea6b6fc1b93bca90bb66d765bcfba9b",
+  "output_binary_sha256": "851066943c2c0a77a53efb9b9892563c1c3f2a9ab24c8bb0bad5b561a53624d8",
+  "output_ihex_sha256": "8f7f8c33910f6f3c08226531c753707667eadee8b073689001d10b12fec035aa",
+  "firmware_bytes": 196608,
+  "changed_byte_offsets": [
+    24,
+    25,
+    26,
+    27,
+    252,
+    253,
+    254,
+    255,
+    280,
+    281,
+    282,
+    283,
+    508,
+    509,
+    510,
+    511,
+    88356,
+    88357,
+    88358,
+    88359,
+    88360,
+    88361,
+    88363,
+    88364,
+    88365
+  ],
+  "instruction_file_offset": "0x15924",
+  "old_instructions": "84001003004c00010041",
+  "new_instructions": "020100201003004c9208",
+  "original_headers": [
+    {
+      "base": "0x0",
+      "ilm_crc": "c0f3ab59",
+      "dlm_crc": "c04a7602",
+      "header_crc": "341a7081"
+    },
+    {
+      "base": "0x100",
+      "ilm_crc": "c0f3ab59",
+      "dlm_crc": "c04a7602",
+      "header_crc": "166c0731"
+    }
+  ],
+  "patched_headers": [
+    {
+      "base": "0x0",
+      "ilm_crc": "c9ed43fe",
+      "dlm_crc": "c04a7602",
+      "header_crc": "a96528b0"
+    },
+    {
+      "base": "0x100",
+      "ilm_crc": "c9ed43fe",
+      "dlm_crc": "c04a7602",
+      "header_crc": "8b135f00"
+    }
+  ],
+  "all_section_and_header_crcs_valid": true,
+  "intel_hex_checksums_and_payload_valid": true,
+  "all_other_firmware_bytes_identical": true
+}

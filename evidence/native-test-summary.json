@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-03",
+  "device": "Xiaomi Pad 5 (nabu)",
+  "rom": "crDroid 12",
+  "controller": "CSOT Novatek NT36523",
+  "firmware_version": 25,
+  "pen": "Dell PN7522W",
+  "baseline_commit": "a07a230b6811f8e2d8c15a04e99eefd0d49c3b82",
+  "test_method": "Temporary boot of original compiled kernel with only 25 embedded firmware bytes changed",
+  "original_compiled_driver_identical": true,
+  "all_other_kernel_bytes_identical": true,
+  "original_decompressed_ramdisk_identical": true,
+  "spi_fallback_code_present": false,
+  "diagnostic_kernel_modules_loaded": false,
+  "boot_partition_written": false,
+  "boot_partition_hash_unchanged": true,
+  "controller_startup_passed": true,
+  "user_pre_capture_report": "works: normal operation confirmed before recording",
+  "separate_subjective_post_capture_report": "not collected",
+  "window_seconds": 60.2,
+  "normal_native_pen_packets": 1891,
+  "native_button_byte_counts": {
+    "0": 884,
+    "3": 7,
+    "1": 497,
+    "2": 503
+  },
+  "invalid_pen_checksums": 0,
+  "button_transitions": {
+    "BTN_STYLUS": {
+      "down": 6,
+      "up": 6
+    },
+    "BTN_STYLUS2": {
+      "down": 5,
+      "up": 5
+    }
+  },
+  "android_events": 201,
+  "android_button_state_counts": {
+    "0": 101,
+    "96": 1,
+    "32": 52,
+    "64": 47
+  },
+  "first_contact_matches": 9,
+  "first_contact_timestamp_tolerance_ms": 1,
+  "physical_approach_speed_instrumented": false,
+  "extra_internal_state_spi_reads": 0,
+  "spi_transactions_captured": 1939,
+  "lost_capture_events": 0,
+  "detected_controller_kernel_faults": 0,
+  "raw_device_logs_included": false,
+  "remaining_coverage": [
+    "Original Xiaomi pen",
+    "Other supported pens/panels",
+    "Charging",
+    "Suspend/resume",
+    "Sustained use"
+  ]
+}

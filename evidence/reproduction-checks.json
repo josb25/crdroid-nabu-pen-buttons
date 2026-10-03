@@ -1,0 +1,19 @@
+{
+  "standalone_generator_matches_device_tested_ihex_byte_for_byte": true,
+  "repeat_generation_identical": true,
+  "upstream_patch_applies_cleanly_to_pinned_file": true,
+  "applied_patch_equals_generator_output": true,
+  "reverse_patch_check_passed": true,
+  "rejected_inputs": [
+    "different binary with valid Intel HEX checksums",
+    "already patched input",
+    "corrupted Intel HEX checksum",
+    "missing data record",
+    "missing EOF",
+    "data after EOF"
+  ],
+  "validation_active_under_python_optimization": true,
+  "rejected_cli_input_created_no_output": true,
+  "output_ihex_sha256": "8f7f8c33910f6f3c08226531c753707667eadee8b073689001d10b12fec035aa",
+  "scope": "offline reproducibility and refusal checks; device result is separate"
+}
