@@ -1,0 +1,81 @@
+{
+  "input_binary_sha256": "d66d15f3dff35292e42e0d301bf53a7fcea6b6fc1b93bca90bb66d765bcfba9b",
+  "output_binary_sha256": "851066943c2c0a77a53efb9b9892563c1c3f2a9ab24c8bb0bad5b561a53624d8",
+  "output_ihex_sha256": "8f7f8c33910f6f3c08226531c753707667eadee8b073689001d10b12fec035aa",
+  "firmware_bytes": 196608,
+  "changed_byte_offsets": [
+    24,
+    25,
+    26,
+    27,
+    252,
+    253,
+    254,
+    255,
+    280,
+    281,
+    282,
+    283,
+    508,
+    509,
+    510,
+    511,
+    88356,
+    88357,
+    88358,
+    88359,
+    88360,
+    88361,
+    88363,
+    88364,
+    88365
+  ],
+  "instruction_file_offset": "0x15924",
+  "old_instructions": "84001003004c00010041",
+  "new_instructions": "020100201003004c9208",
+  "original_headers": [
+    {
+      "base": "0x0",
+      "ilm_crc": "c0f3ab59",
+      "dlm_crc": "c04a7602",
+      "header_crc": "341a7081"
+    },
+    {
+      "base": "0x100",
+      "ilm_crc": "c0f3ab59",
+      "dlm_crc": "c04a7602",
+      "header_crc": "166c0731"
+    }
+  ],
+  "patched_headers": [
+    {
+      "base": "0x0",
+      "ilm_crc": "c9ed43fe",
+      "dlm_crc": "c04a7602",
+      "header_crc": "a96528b0"
+    },
+    {
+      "base": "0x100",
+      "ilm_crc": "c9ed43fe",
+      "dlm_crc": "c04a7602",
+      "header_crc": "8b135f00"
+    }
+  ],
+  "all_section_and_header_crcs_valid": true,
+  "intel_hex_checksums_and_payload_valid": true,
+  "all_other_firmware_bytes_identical": true,
+  "target_repository": "crdroidandroid/android_kernel_xiaomi_sm8150",
+  "target_branch": "17.0",
+  "target_commit": "a17239b2eda3ccba274456d87aab4fd6f0bb734d",
+  "device_test_source_baseline": "a07a230b6811f8e2d8c15a04e99eefd0d49c3b82",
+  "target_firmware_git_blob": "a271d35fc1b7038c53618915ce476f3c9f4fa2d9",
+  "target_driver_git_tree": "c7e229b2f9d02063411dff5e26f5b5d080e15e7f",
+  "firmware_identical_to_tested_baseline": true,
+  "nt36523_driver_tree_identical_to_tested_baseline": true,
+  "original_ihex_sha256": "0ed2801daeab649abd0cf201d5ce9ffa36c964ab0feb54635f523a76a28c240e",
+  "patch_sha256": "b5b0ac62a31d6f08be7c041cac780650b040975ec463f4a58bc7ee0c3a9cd25c",
+  "patch_applies_to_pinned_17_baseline": true,
+  "applied_patch_matches_generator": true,
+  "reverse_patch_check_passed": true,
+  "runtime_scope": "Instrumented crDroid 12 Dell PN7522W/CSOT/v25 test; additional manual user report for first-generation Xiaomi pen buttons without Bluetooth; Android 17 not built or booted in this preparation"
+}

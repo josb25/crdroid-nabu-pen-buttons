@@ -1,0 +1,11 @@
+{
+  "reported_date": "2026-10-23",
+  "pen": "Original first-generation Xiaomi pen",
+  "source": "Direct user report in the pen-fix collaboration",
+  "side_buttons_work": true,
+  "bluetooth_connection_required_for_side_buttons": false,
+  "evidence_type": "Manual user functional test",
+  "additional_instrumented_capture_available": false,
+  "android_17_runtime_test_claimed": false,
+  "charging_suspend_and_sustained_use_verified_by_this_report": false
+}

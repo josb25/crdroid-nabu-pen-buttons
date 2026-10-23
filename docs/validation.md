@@ -64,9 +64,17 @@ firmware was present exactly once and 37 stock vendor-module symbol checks passe
 This separate rebuild was not booted; the actual device test used the exact
 original compiled kernel, which isolates the firmware change more strictly.
 
+## Additional user report: first-generation Xiaomi pen
+
+On October 23, 2026, the user reported testing the original first-generation
+Xiaomi pen: its side buttons work without a Bluetooth connection. No additional
+instrumented packet capture accompanies that manual report. It does not establish
+charging, suspend/resume, sustained use or Android 17 runtime coverage.
+See [the separate user report](../evidence/xiaomi-first-generation-user-report.json).
+
 ## Required before release inclusion
 
-- Original Xiaomi pen and other supported pens: writing, side buttons and battery behavior.
+- Broader Xiaomi pen behavior and other supported pens: writing, buttons and battery behavior.
 - Finger touch, hover/contact, rapid entry, release away from the screen and palm interaction.
 - Pen charging, repeated suspend/resume and longer use.
 - Other supported panels, if maintainers determine this blob applies to them.

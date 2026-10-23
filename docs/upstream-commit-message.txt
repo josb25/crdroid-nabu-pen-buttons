@@ -1,30 +1,23 @@
 firmware: nabu: report decoded pen side buttons in NT36523 v25
 
-The CSOT NT36523 v25 pen-report formatter clears its button field even
-though Dell PN7522W side buttons are decoded in the internal pen object.
-The existing Linux input driver already maps that field to BTN_STYLUS
-and BTN_STYLUS2.
+The CSOT NT36523 v25 pen-report formatter clears the button field even
+though the Dell PN7522W side buttons are decoded internally. The existing
+driver already maps this field to BTN_STYLUS and BTN_STYLUS2.
 
-Replace a same-length ten-byte instruction window to copy the decoded
-button byte while preserving the adjacent battery value for the existing
-branches. Update both shared ILM CRC copies and both cascade-header CRCs.
-The decoded blob changes exactly nine code bytes and sixteen CRC bytes;
-report size, layout and checksum code remain unchanged.
+Copy the decoded state into the normal report field while preserving the
+adjacent battery value. Update both shared ILM CRCs and cascade header
+CRCs. Exactly nine instruction bytes and sixteen CRC bytes change.
 
-Only firmware/novatek_nt36523_fw01.bin.ihex changes. No driver fallback,
-additional IRQ SPI reads, settings, Bluetooth or remapping changes.
+The firmware and NT36523 driver tree on the 17.0 baseline are identical
+to the tested 16.0 baseline. Generation, section/header checksums, Intel
+HEX validation and patch application checks pass.
 
-Validation: generated output matches the tested binary SHA256; all section,
-header and Intel HEX checksums pass. A temporary boot of the original
-compiled kernel with only its 25 embedded firmware bytes changed recorded
-1891 valid native pen packets over 60.2 seconds, balanced Linux transitions
-for both buttons and Android primary/secondary/combined states, with no
-extra internal-state reads or detected faults. All nine recorded stroke
-starts matched native state within timestamp precision. No partition was
-flashed. Tested on one Dell/CSOT/v25 device; other pens, suspend/resume,
-charging and sustained use still require coverage before release inclusion.
+Existing crDroid 12 temporary-boot testing with the original compiled
+driver recorded 1891 valid pen packets and balanced events for both
+buttons without extra internal-state SPI reads or detected faults. The
+user also reports original first-generation Xiaomi pen buttons working
+without Bluetooth. Android 17 has not been boot-tested for this change;
+charging, suspend/resume and sustained use still need coverage.
 
-Input binary SHA256:
-d66d15f3dff35292e42e0d301bf53a7fcea6b6fc1b93bca90bb66d765bcfba9b
-Output binary SHA256:
+Patched binary SHA256:
 851066943c2c0a77a53efb9b9892563c1c3f2a9ab24c8bb0bad5b561a53624d8
