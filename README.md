@@ -23,17 +23,21 @@ not an official crDroid release or a universal fix for all pens/panels/firmware.
 ## Upstream target
 
 - Repository: [crdroidandroid/android_kernel_xiaomi_sm8150](https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150)
-- Submission branch: `17.0`, as requested by the nabu maintainer
-- Verified submission baseline: [`a17239b2eda3ccba274456d87aab4fd6f0bb734d`](https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150/commit/a17239b2eda3ccba274456d87aab4fd6f0bb734d)
+- Current submission: [`16.0` backport, PR #26](https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150/pull/26), as suggested by the nabu maintainer after the `17.0` integration
+- Already integrated in `17.0`: [`2d2bde2`](https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150/commit/2d2bde2dc39df1d3ae91e8ba4aa3fd4e7a17581b); the resulting firmware is byte-identical to this fix
+- Original `17.0` submission baseline: [`a17239b2eda3ccba274456d87aab4fd6f0bb734d`](https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150/commit/a17239b2eda3ccba274456d87aab4fd6f0bb734d)
 - Tested baseline: [`a07a230b6811f8e2d8c15a04e99eefd0d49c3b82`](https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150/commit/a07a230b6811f8e2d8c15a04e99eefd0d49c3b82)
 - Only upstream file changed: `firmware/novatek_nt36523_fw01.bin.ihex`
 - Firmware provenance: [upstream v25 update from Xiaomi OS1.0.3.0.TKXCNXM](https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150/commit/9681392465ddfd47ea8a4f2efbdf55f1bed0c387)
 
-The firmware and complete NT36523 driver subtree on the verified `17.0` baseline
+The firmware and complete NT36523 driver subtree on the original `17.0` baseline
 are identical to the tested `16.0` baseline. The patch applies cleanly and matches
 the tested output hashes. Android 17 has not been built or booted for this submission.
 
 [Download the patched binary, Intel HEX and reproducible package](https://github.com/josb25/crdroid-nabu-pen-buttons/releases/tag/nabu-v25-pen-buttons-17.0).
+The downloads work for both branches; their archive name and compatibility record
+retain the original `17.0` submission pins. The `16.0` PR is based directly on
+the tested source baseline and contains only the firmware change.
 
 The Generation 2 and game-mode firmware blobs are separate and remain untouched.
 Do not apply these offsets to a different firmware version. The generator refuses

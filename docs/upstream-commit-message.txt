@@ -1,23 +1,21 @@
-firmware: nabu: report decoded pen side buttons in NT36523 v25
+firmware: nabu: backport NT36523 v25 pen side buttons to 16.0
+
+Bring 16.0 into line with the firmware correction merged in 17.0 as
+2d2bde2dc39df1d3ae91e8ba4aa3fd4e7a17581b. The resulting firmware file is
+byte-identical to that upstream change.
 
 The CSOT NT36523 v25 pen-report formatter clears the button field even
-though the Dell PN7522W side buttons are decoded internally. The existing
-driver already maps this field to BTN_STYLUS and BTN_STYLUS2.
+though the side buttons are decoded internally. Copy the decoded state
+into the normal report field for the existing driver, and update both
+shared ILM CRCs and cascade header CRCs. Exactly nine instruction bytes
+and sixteen CRC bytes change. No driver changes are needed.
 
-Copy the decoded state into the normal report field while preserving the
-adjacent battery value. Update both shared ILM CRCs and cascade header
-CRCs. Exactly nine instruction bytes and sixteen CRC bytes change.
+The 16.0 source baseline is the baseline used by the existing crDroid 12
+test. The original compiled driver delivered both buttons in the Dell
+PN7522W test without additional SPI reads or detected faults. The user
+also reports original first-generation Xiaomi pen buttons working
+without Bluetooth. Charging, suspend/resume and sustained use still
+require regression coverage.
 
-The firmware and NT36523 driver tree on the 17.0 baseline are identical
-to the tested 16.0 baseline. Generation, section/header checksums, Intel
-HEX validation and patch application checks pass.
-
-Existing crDroid 12 temporary-boot testing with the original compiled
-driver recorded 1891 valid pen packets and balanced events for both
-buttons without extra internal-state SPI reads or detected faults. The
-user also reports original first-generation Xiaomi pen buttons working
-without Bluetooth. Android 17 has not been boot-tested for this change;
-charging, suspend/resume and sustained use still need coverage.
-
-Patched binary SHA256:
-851066943c2c0a77a53efb9b9892563c1c3f2a9ab24c8bb0bad5b561a53624d8
+Upstream commit: https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150/commit/2d2bde2dc39df1d3ae91e8ba4aa3fd4e7a17581b
+Patch source: https://github.com/josb25/crdroid-nabu-pen-buttons
