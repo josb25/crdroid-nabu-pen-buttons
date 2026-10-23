@@ -18,4 +18,5 @@ without Bluetooth. Charging, suspend/resume and sustained use still
 require regression coverage.
 
 Upstream commit: https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150/commit/2d2bde2dc39df1d3ae91e8ba4aa3fd4e7a17581b
+Backport request: https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150/pull/26#issuecomment-6364738010
 Patch source: https://github.com/josb25/crdroid-nabu-pen-buttons

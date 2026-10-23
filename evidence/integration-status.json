@@ -7,8 +7,12 @@
   "upstream_firmware_identical_to_tested_output": true,
   "backport_branch": "16.0",
   "backport_base": "a07a230b6811f8e2d8c15a04e99eefd0d49c3b82",
-  "backport_commit": "a596680678c75fac2503ca33cece892c0828aa41",
+  "backport_commit": "def25ce5e6b341201a1ef7aec197cca66153f5ec",
   "backport_pr": "https://github.com/crdroidandroid/android_kernel_xiaomi_sm8150/pull/26",
   "backport_changed_file": "firmware/novatek_nt36523_fw01.bin.ihex",
-  "new_device_test_for_retarget": false
+  "new_device_test_for_retarget": false,
+  "github_mergeable_at_check": true,
+  "github_mergeable_state_at_check": "clean",
+  "backport_commit_count_at_check": 1,
+  "backport_changed_file_count_at_check": 1
 }
